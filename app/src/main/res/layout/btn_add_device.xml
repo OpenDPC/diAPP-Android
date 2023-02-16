@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:lineSpacingExtra="8sp"
             android:text="@string/btn_no_qr_code"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#BA0C20"
             android:textSize="16sp"
             android:textStyle="bold" />
 
