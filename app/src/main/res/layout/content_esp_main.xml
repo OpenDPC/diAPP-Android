@@ -39,6 +39,13 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="@dimen/margin_32"
         android:orientation="vertical">
+        
+        <Button
+            android:id="@+id/home_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="退出"
+            android:textColor="#30EDC8" />
 
         <TextView
             android:layout_width="wrap_content"
