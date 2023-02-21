@@ -71,6 +71,21 @@ public class EspMainActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences(AppConstants.ESP_PREFERENCES, Context.MODE_PRIVATE);
         provisionManager = ESPProvisionManager.getInstance(getApplicationContext());
+        
+        Button home = findViewById(R.id.home_button);// 通过ID值获得按钮对象
+        home.setOnClickListener(new View.OnClickListener() {// 为按钮增加单击事件监听器
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();// 创建Intent对象
+                intent.setAction(Intent.ACTION_MAIN);// 设置Intent动作
+                intent.addCategory(Intent.CATEGORY_HOME);// 设置Intent种类
+                startActivity(intent);// 将Intent传递给Activity
+            }
+
+        });
+        
+        
     }
 
     @Override
