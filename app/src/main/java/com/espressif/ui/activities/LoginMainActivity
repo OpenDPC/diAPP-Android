@@ -43,4 +43,17 @@ public class LoginMainActivity extends AppCompatActivity {
 
 
     }
+    
+    
+        protected void encryption(){
+        EditText plaintext = password;
+        KeyGenerator keygen = KeyGenerator.getInstance("AES");
+        keygen.init(256);
+        SecretKey key = keygen.generateKey();
+        Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5PADDING");
+        cipher.init(Cipher.ENCRYPT_MODE, key);
+        byte[] ciphertext = cipher.doFinal(plaintext);
+        byte[] iv = cipher.getIV();
+    }
+    
 }
